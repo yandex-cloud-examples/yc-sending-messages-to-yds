@@ -1,20 +1,17 @@
-# Example on how to send Yandex Data Streams messages by raw HTTP
+# Examples of sending messages to Yandex Data Stream via HTTP without using third-party SDKs
 
-Sample python3 project for send messages by raw HTTP. Based on [original example](https://stackoverflow.com/questions/51991401/how-to-implement-amazon-kinesis-putmedia-method-using-python).
+The example demonstrates how to send messages to [Yandex Data Stream](https://yandex.cloud/ru/docs/data-streams/) via HTTP using Python 3 without using third-party SDK. It is based on <https://stackoverflow.com/questions/51991401/how-to-implement-amazon-kinesis-putmedia-method-using-python>.
 
-# Yandex Services
-* [Yandex Data Stream](https://cloud.yandex.ru/services/yds)
-* [Yandex Database](https://cloud.yandex.ru/services/ydb)
+## Before you begin
 
-# Prepare services
+1. [Create](https://yandex.cloud/ru/docs/data-streams/operations/manage-streams#create-data-stream) a Yandex Data Stream data stream and save its full name. The name includes the stream name and the database identifier.
+2. [Create](https://yandex.cloud/ru/docs/iam/operations/sa/create) a service account and assign (https://yandex.cloud/ru/docs/iam/operations/sa/assign-role-for-sa) it the yds.write role.
+3. [Create](https://yandex.cloud/ru/docs/iam/operations/authentication/manage-access-keys#create-access-key) static access keys for the service account.
 
-1. Create _Yandex Data Streams_ stream and save full stream name (full stream name includes stream name and containing database id)
-2. Create static credentials with `yds.writer` role
+## Sending messages
 
-# Send message to stream
-1. Set environment variables `AWS_ACCESS_KEY_ID`, `AWS_SECRET_ACCESS_KEY` to static credentials
-2. Fill script arguments 
-   - `--full-stream-name` with full stream name like /ru-central1/b2g6ad43m6he1ooql98r/etn01eh5rn074ncm9cbb/your_stream_name
-   - `--message` with message to send to Yandex Data Streams
-3. Run the script
-
+1. Set the appropriate values for the `AWS_ACCESS_KEY_ID` and `AWS_SECRET_ACCESS_KEY` environment variables to the static key identifier and its secret value.
+2. Specify custom values in the `putrecord-http-example.py` script:
+   * `--full-stream-name`: The full name of the data stream, for example, `/ru-central1/b2g6ad43m6he********/etn01eh5rn07********/<stream_name>`
+   * `--message`: The message to send to Yandex Data Streams
+3. Run the `putrecord-http-example.py` script.
