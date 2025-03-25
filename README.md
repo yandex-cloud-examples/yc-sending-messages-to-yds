@@ -1,4 +1,4 @@
-# Примеры отправки сообщений в Yandes Data Stream по HTTP без использования сторонних SDK
+# Примеры отправки сообщений в Yandex Data Stream по HTTP без использования сторонних SDK
 
 Данный пример демонстрирует как отправлять сообщения в [Yandex Data Stream](https://yandex.cloud/ru/docs/data-streams/) по HTTP на python3, без использования сторонних SDK. Сделан на основе <https://stackoverflow.com/questions/51991401/how-to-implement-amazon-kinesis-putmedia-method-using-python>.
 
