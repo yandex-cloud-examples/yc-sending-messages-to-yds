@@ -15,6 +15,6 @@
 1. Задайте для переменных окружения `AWS_ACCESS_KEY_ID`, `AWS_SECRET_ACCESS_KEY` соответствующие значения идентификатора статического ключа и его секретное значение.
 1. Укажите пользовательские значения в скрипте `putrecord-http-example.py`:
     * `--full-stream-name` — полное имя потока данных, например `/ru-central1/b2g6ad43m6he********/etn01eh5rn07********/<имя_потока>`
-    * `--message` — сообщение для отправки в Yandes Data Stream.
+    * `--message` — сообщение для отправки в Yandex Data Stream.
 1. Выполните скрипт `putrecord-http-example.py`.
 
