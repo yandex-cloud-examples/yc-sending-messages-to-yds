@@ -5,7 +5,7 @@
 
 ## Перед началом работы
 
-1. [Создайте](https://yandex.cloud/ru/docs/data-streams/operations/manage-streams#create-data-stream) поток данных Yandes Data Stream и сохраните его полное имя. Имя содержит название потока и идентификатор базы данных.
+1. [Создайте](https://yandex.cloud/ru/docs/data-streams/operations/manage-streams#create-data-stream) поток данных Yandex Data Stream и сохраните его полное имя. Имя содержит название потока и идентификатор базы данных.
 1. [Создайте](https://yandex.cloud/ru/docs/iam/operations/sa/create) сервисный аккаунт и [назначьте](https://yandex.cloud/ru/docs/iam/operations/sa/assign-role-for-sa) ему роль `yds.write`.
 1. Для сервисного аккаунта [создайте](https://yandex.cloud/ru/docs/iam/operations/authentication/manage-access-keys#create-access-key) статические ключи доступа.
 
